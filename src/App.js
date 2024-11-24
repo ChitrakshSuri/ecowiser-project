@@ -1,14 +1,10 @@
-import { useState } from "react";
 import "./App.css";
 import CreateNode from "./components/CreateNode";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
-import Node from "./components/Node";
 
 function App() {
   const [addItem, setAddItem] = useState([]);
-  const [currentPage, setCurrentPage] = useState(1);
-  const notesPerPage = 6;
 
   const addNode = (note) => {
     setAddItem((prevData) => {
@@ -24,21 +20,7 @@ function App() {
     );
   };
 
-  const onPin = (id) => {
-    setAddItem((oldData) => {
-      const updatedNotes = oldData.map((note, index) =>
-        index === id ? { ...note, pinned: !note.pinned } : note
-      );
-      return updatedNotes;
-    });
-  };
-
-  // Pagination logic
-  const indexOfLastNote = currentPage * notesPerPage;
-  const indexOfFirstNote = indexOfLastNote - notesPerPage;
-  const currentNotes = addItem.slice(indexOfFirstNote, indexOfLastNote);
-  const totalPages = Math.ceil(addItem.length / notesPerPage);
-
+  
   return (
     <div className="App">
       <Header />
@@ -75,6 +57,7 @@ function App() {
           Next
         </button>
       </div>
+      <CreateNode />
       <Footer />
     </div>
   );
