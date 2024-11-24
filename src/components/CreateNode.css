@@ -1,40 +1,19 @@
-.main_note {
+.main_node {
   width: 500px;
   padding: 15px 10px 5px 10px;
   margin: 20px auto;
 }
-.my_notes h1 {
-  color: #34495e;
-}
-.my_notes p {
-  color: grey;
-}
-.form {
-  min-height: 50px;
-  color: #ecf0f1;
-  padding: 15px 10px 5px 10px;
-  box-shadow: 3px 5px 15px -5px rgba(0, 0, 0, 0.5);
-  border-radius: 10px;
-  position: relative;
-}
-input {
+
+input, textarea {
   width: 100%;
-  line-height: 30px;
-  background: transparent;
-  border: none;
-  outline: none;
-  font-size: 1.5rem;
+  padding: 8px;
   margin: 10px 0;
-  font-weight: bold;
+  border: 1px solid #ddd;
+  border-radius: 5px;
 }
+
 textarea {
-  width: 100%;
-  line-height: 30px;
-  background: transparent;
-  border: none;
-  outline: none;
-  font-size: 1rem;
-  margin: 10px 0;
+  resize: vertical;
 }
 
 .MuiButton-root {
@@ -47,60 +26,47 @@ textarea {
   background-color: #fff !important;
   border-radius: 50% !important;
 }
+
 .MuiButton-root .plus-sign {
   font-size: 45px !important;
   font-weight: 900;
   color: #f4b000;
   cursor: pointer;
   z-index: 222;
-  background: transparent;
+  /* background: red; */
 }
-.MuiButton-root:hover {
-  background-color: #f4b400;
-}
-.MuiButton-root:hover .plus-sign {
-  color: #fff;
-  background: transparent;
-}
-.note {
-  background: #fff;
-  border-radius: 7px;
-  box-shadow: 0 2px 5px;
-  padding: 10px;
-  width: 240px;
-  margin: 16px;
-  float: left;
-}
-.note h1 {
-  font-size: 1.1em;
-  margin-bottom: 6px;
-}
-.note p {
-  font-size: 1.1em;
-  margin-bottom: 10px;
-  white-space: pre-wrap;
-  word-wrap: break-word;
-}
-.note .btn {
-  position: relative;
-  float: right;
-  margin-right: 10px;
-  border: none;
-  width: 50px;
-  color: #f4b400;
+/* Button for the add icon */
+.MuiButton-root {
+  width: 30px;
   height: 50px;
-  background: transparent;
+  position: absolute;
+  bottom: -28px;
+  left: 400px;
   cursor: pointer;
-  outline: none;
-  border-radius: 50%;
+  background-color: #fff !important;
+  border-radius: 50% !important;
 }
-.deleteIcon {
-  width: 0.7em;
-  height: 0.7em;
+
+/* Button style inside CreateNode for adding */
+.MuiButton-root .plus-sign {
+  font-size: 45px !important;
+  font-weight: 900;
+  color: #f4b000;
+  cursor: pointer;
+  z-index: 222;
+  /* background: ; */
 }
-.note .btn:hover {
+
+/* General button style for other buttons (if any in CreateNode) */
+button {
+  padding: 10px 20px;
   background-color: #f5ba13;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
-.note .btn:hover .deleteIcon {
-  color: #fff;
+
+button:hover {
+  background-color: #f3a300;
 }
